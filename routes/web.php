@@ -27,3 +27,11 @@ Route::get('/principal/producto/{id?}', function ($id=10) {
         ');
 });
 
+Route::get('/principal/sucursales', function () {
+    return view('sucursales');
+});
+
+Route::get('/principal/categorias', function () {
+    return view('categorias');
+});
+
