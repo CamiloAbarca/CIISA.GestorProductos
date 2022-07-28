@@ -1,7 +1,10 @@
 @extends('layouts.master')
 
+@section('title','Gestor de Productos')
+
 @section('content')
 <br>
+<div class="container text-center">
 <h1>Gestor de Productos</h1>
 <br>
 
@@ -76,4 +79,5 @@
     </tr>
   </tbody>
 </table>
+</div>
 @stop

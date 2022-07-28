@@ -1,7 +1,10 @@
 @extends('layouts.master')
 
+@section('title','Crear Categorías')
+
 @section('content')
 <br>
+<div class="container text-center">
 <h1>Creación de Categoría</h1>
 <br>
 
@@ -51,4 +54,5 @@
     </tr>
   </tbody>
 </table>
+</div>
 @stop

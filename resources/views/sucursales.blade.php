@@ -1,7 +1,10 @@
 @extends('layouts.master')
 
+@section('title','Crear Sucursales')
+
 @section('content')
 <br>
+<div class="container text-center">
 <h1>Creación de Sucursal</h1>
 <br>
 
@@ -61,4 +64,5 @@
     </tr>
   </tbody>
 </table>
+</div>
 @stop

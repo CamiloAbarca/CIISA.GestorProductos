@@ -35,3 +35,6 @@ Route::get('/principal/categorias', function () {
     return view('categorias');
 });
 
+Route::get('/principal/productos', function () {
+    return view('productos');
+});
