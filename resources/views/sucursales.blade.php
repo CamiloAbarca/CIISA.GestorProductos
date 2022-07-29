@@ -8,20 +8,20 @@
 <h1>Creación de Sucursal</h1>
 <br>
 
-<form>
+<form method="POST" action="{{ url('/sucursales') }}">
   <div class="mb-3">
     <label for="nombreSucursal" class="form-label">Nombre de Sucursal:</label>
-    <input type="text" class="form-control" id="nombreSucursal">
+    <input type="text" class="form-control" id="nombreSucursal" name="nombreSucursal">
   </div>
   <div class="mb-3">
     <label for="direccionSucursal" class="form-label">Dirección:</label>
-    <input type="text" class="form-control" id="direccionSucursal">
+    <input type="text" class="form-control" id="direccionSucursal" name="direccionSucursal">
   </div>
   <button type="submit" class="btn btn-primary">Crear</button>
   <br>
 </form>
 <br>
-<a href=""><button type="button" class="btn btn-dark">Volver</button></a>
+<a href="{{ route('volverPrincipal') }}"><button type="button" class="btn btn-dark">Volver</button></a>
 
 <br>
 <hr>

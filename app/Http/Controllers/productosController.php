@@ -27,6 +27,7 @@ class productosController extends Controller
         return "Código: ". $request->input("codigo").
         ", Nombre: ". $request->input("nombre").
         ", Categoría: ". $request->input("categoria").
+        ", Sucursal: ". $request->input("sucursal").
         ", Cantidad: ". $request->input("cantidad").
         ", Precio: ". $request->input("precio");
         ", Descripción: ". $request->input("descripcion");

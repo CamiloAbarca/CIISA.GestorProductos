@@ -8,20 +8,20 @@
 <h1>Creación de Categoría</h1>
 <br>
 
-<form>
+<form method="POST" action="{{ url('/categorias') }}">
   <div class="mb-3">
     <label for="nombreCategoria" class="form-label">Nombre de la Categoría:</label>
-    <input type="text" class="form-control" id="nombreCategoria">
+    <input type="text" class="form-control" id="nombreCategoria" name="nombreCategoria">
   </div>
   <div class="mb-3">
     <label for="detalleCategoria" class="form-label">Detalle:</label>
-    <input type="text" class="form-control" id="detalleCategoria">
+    <input type="text" class="form-control" id="detalleCategoria" name="detalleCategoria">
   </div>
   <button type="submit" class="btn btn-primary">Crear</button>
   <br>
 </form>
 <br>
-<a href=""><button type="button" class="btn btn-dark">Volver</button></a>
+<a href="{{ route('volverPrincipal') }}"><button type="button" class="btn btn-dark">Volver</button></a>
 
 <br>
 <hr>

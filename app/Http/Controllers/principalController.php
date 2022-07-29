@@ -9,4 +9,8 @@ class principalController extends Controller
     public function index(){
         return view('principal');
     }
+
+    public function volverPrincipal(){
+        return view('principal');
+    }
 }

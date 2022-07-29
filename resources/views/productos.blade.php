@@ -32,8 +32,11 @@
 
   <div class="mb-3">
     <label for="sucursal" class="form-label">Sucursal:</label>
-    <select id="sucursal" class="form-select">
-      <option>Seleccione...</option>
+    <select id="sucursal" name="sucursal" class="form-select">
+    <option>Seleccione...</option>
+      <option id="providencia">Providencia</option>
+      <option id="lasCondes">Las Condes</option>
+      <option id="laCisterna">La Cisterna</option>
     </select>
   </div>
 
@@ -54,6 +57,8 @@
 
   <button type="submit" class="btn btn-primary">Crear</button>
 </form>
+<br>
+<a href="{{ route('volverPrincipal') }}"><button type="button" class="btn btn-dark">Volver</button></a>
 
 </div>
 @stop

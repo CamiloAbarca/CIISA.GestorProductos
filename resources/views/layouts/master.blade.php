@@ -12,8 +12,9 @@
     @section('header')
     <nav class="navbar bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-        <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="{{ route('volverPrincipal') }}">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEImNXdfl5GsKwsN-LboK1-r2fSXxsMXhuwT2zj-3UdOJ59WVHAm5uirrcJ0YL6FEQwXw&usqp=CAU"
+        alt="" width="30" height="30" class="d-inline-block align-text-top">
         Gestor de Productos
         </a>
         <button type="button" class="btn btn-dark">Login</button>
