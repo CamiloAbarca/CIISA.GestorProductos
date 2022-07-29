@@ -11,13 +11,13 @@
 <div class="container text-center">
   <div class="row">
     <div class="col">
-    <a href="principal/sucursales"><button type="button" class="btn btn-warning">Crear y ver Sucursales</button></a>
+    <a href="{{ route('gestionSucursales') }}"><button type="button" class="btn btn-warning">Crear y ver Sucursales</button></a>
     </div>
     <div class="col">
-    <a href="principal/categorias"><button type="button" class="btn btn-info">Crear y ver Categorías</button></a>
+    <a href="{{ route('gestionCategorias') }}"><button type="button" class="btn btn-info">Crear y ver Categorías</button></a>
     </div>
     <div class="col">
-    <a href="principal/productos"><button type="button" class="btn btn-success">Crear Producto</button></a>
+    <a href="{{ route('crearProducto') }}"><button type="button" class="btn btn-success">Crear Producto</button></a>
     </div>
   </div>
 </div>
@@ -72,9 +72,9 @@
       <td>Providencia</td>
       <td>64GB - Blanco</td>
       <td>
-      <i class="bi bi-card-list"> Ver | </i>
-      <i class="bi bi-pencil-square"> Editar | </i>
-      <i class="bi bi-trash3"> Eliminar</i>
+      <a href="{{ route('verProducto') }}" ><i class="bi bi-card-list"> Ver</i></a>
+      <a href="{{ route('editarProducto') }}" ><i class="bi bi-pencil-square"> Editar</i></a>
+      <a href="{{ route('eliminarProducto') }}" ><i class="bi bi-trash3">Eliminar</i></a>
       </td>
     </tr>
   </tbody>

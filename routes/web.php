@@ -27,14 +27,13 @@ Route::get('/principal/producto/{id?}', function ($id=10) {
         ');
 });
 
-Route::get('/principal/sucursales', function () {
-    return view('sucursales');
-});
+Route::get('/principal', 'App\Http\Controllers\principalController@index');
+Route::get('/sucursales', 'App\Http\Controllers\sucursalesController@sucursales')->name('gestionSucursales');
+Route::get('/categorias', 'App\Http\Controllers\categoriasController@categorias')->name('gestionCategorias');
 
-Route::get('/principal/categorias', function () {
-    return view('categorias');
-});
+Route::get('/productos', 'App\Http\Controllers\productosController@crear')->name('crearProducto');
+Route::get('/editarProducto', 'App\Http\Controllers\productosController@editar')->name('editarProducto');
+Route::get('/eliminarProducto', 'App\Http\Controllers\productosController@eliminar')->name('eliminarProducto');
+Route::get('/verProducto', 'App\Http\Controllers\productosController@ver')->name('verProducto');
 
-Route::get('/principal/productos', function () {
-    return view('productos');
-});
+Route::post('/productos', 'App\Http\Controllers\productosController@guardar');
