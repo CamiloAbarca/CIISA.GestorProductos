@@ -62,21 +62,24 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($productos as $producto)
     <tr>
-      <th scope="row">1</th>
-      <td>54332</td>
-      <td>iPhone 11</td>
-      <td>500000</td>
-      <td>200</td>
-      <td>Smartphone</td>
-      <td>Providencia</td>
-      <td>64GB - Blanco</td>
+      <th>{{$producto->id}}</th>
+      <td>{{$producto->codigo}}</td>
+      <td>{{$producto->nombre}}</td>
+      <td>{{$producto->precio}}</td>
+      <td>{{$producto->cantidad}}</td>
+      <td>{{$producto->categoriaId}}</td>
+      <td>{{$producto->sucursalId}}</td>
+      <td>{{$producto->descripcion}}</td>
       <td>
       <a href="{{ route('verProducto') }}" ><i class="bi bi-card-list"> Ver</i></a>
       <a href="{{ route('editarProducto') }}" ><i class="bi bi-pencil-square"> Editar</i></a>
       <a href="{{ route('eliminarProducto') }}" ><i class="bi bi-trash3">Eliminar</i></a>
       </td>
     </tr>
+    @endforeach
+    
   </tbody>
 </table>
 </div>

@@ -28,6 +28,7 @@ Route::get('/principal/producto/{id?}', function ($id=10) {
 });
 
 Route::get('/principal', 'App\Http\Controllers\principalController@index');
+Route::get('/principal', 'App\Http\Controllers\productosController@listarProductos');
 Route::get('/sucursales', 'App\Http\Controllers\sucursalesController@sucursales')->name('gestionSucursales');
 Route::get('/categorias', 'App\Http\Controllers\categoriasController@categorias')->name('gestionCategorias');
 Route::get('/Principal', 'App\Http\Controllers\principalController@volverPrincipal')->name('volverPrincipal');

@@ -24,9 +24,8 @@
     <label for="categoria" class="form-label">Categoría:</label>
     <select id="categoria" name="categoria" class="form-select">
       <option>Seleccione...</option>
-      <option id="smartphone">Smartphone</option>
-      <option id="audifono">Audifono</option>
-      <option id="notebook">Notebook</option>
+      <option id="1" name="1">1</option>
+      <option id="2" name="2">2</option>
     </select>
   </div>
 
@@ -34,9 +33,8 @@
     <label for="sucursal" class="form-label">Sucursal:</label>
     <select id="sucursal" name="sucursal" class="form-select">
     <option>Seleccione...</option>
-      <option id="providencia">Providencia</option>
-      <option id="lasCondes">Las Condes</option>
-      <option id="laCisterna">La Cisterna</option>
+    <option id="1" name="1">1</option>
+    <option id="2" name="2">2</option>
     </select>
   </div>
 
@@ -54,7 +52,17 @@
     <label for="descripcion" class="form-label">Descripción:</label>
     <input type="text" class="form-control" id="descripcion" name='descripcion'>
   </div>
-
+  @if($errors->any())
+  <div class="alert alert-danger">
+    <ul>
+      @foreach($errors->all() as $error)
+      <li>
+        {{ $error }}
+      </li>
+      @endforeach
+    </ul>
+  </div>
+  @endif
   <button type="submit" class="btn btn-primary">Crear</button>
 </form>
 <br>
