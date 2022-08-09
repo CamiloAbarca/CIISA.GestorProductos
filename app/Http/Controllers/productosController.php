@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\producto;
-use App\Models\sucursale;
+use App\Models\sucursal;
 use App\Models\categoria;
 
 class productosController extends Controller
@@ -53,12 +53,18 @@ class productosController extends Controller
             'descripcion' => 'required',
 
         ]);
-        return "Código: ". $request->input("codigo").
-        ", Nombre: ". $request->input("nombre").
-        ", Categoría: ". $request->input("categoria").
-        ", Sucursal: ". $request->input("sucursal").
-        ", Cantidad: ". $request->input("cantidad").
-        ", Precio: ". $request->input("precio");
-        ", Descripción: ". $request->input("descripcion");
+
+        $productos = new producto();
+        $productos->codigo = $request->post('codigo');
+        $productos->nombre = $request->post('nombre');
+        $productos->categoriaId = $request->post('categoria');
+        $productos->sucursalId = $request->post('sucursal');
+        $productos->cantidad = $request->post('cantidad');
+        $productos->precio = $request->post('precio');
+        $productos->descripcion = $request->post('descripcion');
+
+        $productos->save();
+
+        return redirect()->route("productosGuardar")->with("success", "Producto creado con Exito!");
     }
 }

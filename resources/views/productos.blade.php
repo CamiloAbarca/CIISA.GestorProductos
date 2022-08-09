@@ -7,9 +7,15 @@
 <div class="container text-center">
 <h1>Crear Producto</h1>
 <br>
+@if ($mensaje = Session::get('success'))
+<div class="alert alert-success" role="alert">
+  {{ $mensaje }}
+</div>
+@endif
+<br>
 
 <div class="container text-center">
-<form method="POST" action="{{ url('/productos') }}">
+<form method="POST" action="{{ route('productosGuardar') }}">
   <div class="mb-3">
     <label for="codigo" class="form-label">Código:</label>
     <input type="number" class="form-control" id="codigo" name='codigo'>

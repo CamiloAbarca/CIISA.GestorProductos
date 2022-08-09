@@ -18,14 +18,14 @@
   <div class="card-header">
     #codigo
   </div>
+  
   <div class="card-body">
     <h2 class="card-title">nombre</h2>
     <h5 class="card-title">cantidad</h5>
     <h5 class="card-title">precio</h5>
     <h5 class="card-title">categoria</h5>
     <h5 class="card-title">sucursal</h5>
-    <p class="card-text">descripción</p>
-    <a href="#" class="btn btn-primary">volver</a>
+    <p class="card-text">descripción</p><a href="{{ route('volverPrincipal') }}"><button type="button" class="btn btn-dark">Volver</button></a>
   </div>
   <!--<div class="card-footer text-muted">
     2 days ago

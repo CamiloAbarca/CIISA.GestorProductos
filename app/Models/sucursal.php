@@ -9,7 +9,7 @@ class sucursal extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id';
-    protected $table = 'categorias';
+    protected $table = 'sucursales';
 
     public function productos(){
         return $this->hasMany('App\Models\producto');
