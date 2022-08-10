@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+
 @section('title','Crear Sucursales')
 
 @section('content')
@@ -85,3 +86,6 @@
 </table>
 </div>
 @stop
+
+
+

@@ -7,16 +7,33 @@
 <div class="container text-center">
 <h1>Creación de Categoría</h1>
 <br>
+@if ($mensaje = Session::get('success'))
+<div class="alert alert-success" role="alert">
+  {{ $mensaje }}
+</div>
+@endif
+<br>
 
-<form method="POST" action="{{ url('/categorias') }}">
+<form method="POST" action="{{ route('categoriasGuardar') }}">
   <div class="mb-3">
-    <label for="nombreCategoria" class="form-label">Nombre de la Categoría:</label>
-    <input type="text" class="form-control" id="nombreCategoria" name="nombreCategoria">
+    <label for="nombre" class="form-label">Nombre de la Categoría:</label>
+    <input type="text" class="form-control" id="nombre" name="nombre">
   </div>
   <div class="mb-3">
-    <label for="detalleCategoria" class="form-label">Detalle:</label>
-    <input type="text" class="form-control" id="detalleCategoria" name="detalleCategoria">
+    <label for="detalle" class="form-label">Detalle:</label>
+    <input type="text" class="form-control" id="detalle" name="detalle">
   </div>
+  @if($errors->any())
+  <div class="alert alert-danger">
+    <ul>
+      @foreach($errors->all() as $error)
+      <li>
+        {{ $error }}
+      </li>
+      @endforeach
+    </ul>
+  </div>
+  @endif
   <button type="submit" class="btn btn-primary">Crear</button>
   <br>
 </form>

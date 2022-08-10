@@ -35,10 +35,9 @@ Route::get('/categorias', 'App\Http\Controllers\categoriasController@categorias'
 
 Route::post('sucursales', 'App\Http\Controllers\sucursalesController@guardar')->name('sucursalesGuardar');
 Route::post('productos', 'App\Http\Controllers\productosController@guardar')->name('productosGuardar');
+Route::post('categorias', 'App\Http\Controllers\categoriasController@guardar')->name('categoriasGuardar');
 
 Route::get('/productos', 'App\Http\Controllers\productosController@crear')->name('crearProducto');
 Route::get('/editarProducto', 'App\Http\Controllers\productosController@editar')->name('editarProducto');
 Route::get('/eliminarProducto', 'App\Http\Controllers\productosController@eliminar')->name('eliminarProducto');
 Route::get('/verProducto', 'App\Http\Controllers\productosController@ver')->name('verProducto');
-
-Route::post('/categorias', 'App\Http\Controllers\categoriasController@guardar');
